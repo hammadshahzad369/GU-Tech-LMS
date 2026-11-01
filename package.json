@@ -1,0 +1,31 @@
+{
+  "name": "gutech-lms",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev -w @gutech/api\" \"npm run dev -w @gutech/web\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test -w @gutech/api",
+    "typecheck": "npm run typecheck --workspaces",
+    "db:reset": "node scripts/db-reset.mjs",
+    "seed": "node scripts/seed.mjs",
+    "test:db": "node scripts/test-database.mjs",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm run test && npm run test:db",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "start": "npm run start -w @gutech/api"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.14",
+    "@playwright/test": "^1.64.1",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.9.10",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

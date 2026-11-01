@@ -1,0 +1,3 @@
+-- Demo auth accounts and related rows are generated through the official Admin API.
+-- Run npm run seed with server-only credentials configured in your local .env.
+-- Do not insert raw passwords into auth.users or commit real credentials.
