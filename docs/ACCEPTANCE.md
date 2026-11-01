@@ -10,7 +10,7 @@
 
 ## Required hosted checks — pending
 
-The Supabase project has not yet been configured successfully in this session. The user reported `relation public.complaints does not exist`; a non-destructive table-presence query was requested to identify the completed migration boundary. Do not blindly rerun or drop the existing database.
+The user has confirmed that the complete Supabase setup SQL now returns “Success, no rows returned.” The earlier missing-table error is resolved by that reported result. Hosted application-level integration checks remain pending.
 
 No server-side Supabase credential has been supplied to the running workspace. Therefore real user creation, demo seeding, password recovery, signed Storage URLs and two-session Realtime delivery have not been tested against the hosted project. No live deployment URL has been issued or verified.
 
